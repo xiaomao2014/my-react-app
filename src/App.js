@@ -29,13 +29,13 @@ function App() {
           我的名字是{name}，年龄{age}。
         </div>
         <div className="button-box">
-          <Button type="primary">Button</Button>
-        </div>
-        {/*测试less使用*/}
-        <div>
-          <TEST />
+          <Button type="primary">按钮</Button>
         </div>
       </header>
+      {/*测试less使用*/}
+      <div className="content-box">
+        <TEST />
+      </div>
     </div>
   );
 }
