@@ -1,6 +1,6 @@
 import React from "react";
 import './test.less'
-import { Table } from "antd";
+import { Table, Popover, Button } from "antd";
 
 
 const dataSource = [
@@ -34,6 +34,12 @@ const columns = [
     key: 'address',
   },
 ];
+const content = (
+  <div>
+    <p>Content</p>
+    <p>Content</p>
+  </div>
+);
 
 function TEST() {
   return (
@@ -43,7 +49,12 @@ function TEST() {
       </div>
       <h3>表格测试：</h3>
       <div>
-        <Table dataSource={dataSource} columns={columns} />;
+        <Table dataSource={dataSource} columns={columns} />
+      </div>
+      <div>
+        <Popover content={content} title="Title">
+          <Button type="primary">Hover me</Button>
+        </Popover>
       </div>
     </div>
   );
